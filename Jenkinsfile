@@ -10,7 +10,7 @@ pipeline{
 			steps{powershell 'docker images -a'
 			      powershell 'cd azure-vote'
 			      powershell 'docker images -a'
-			      powershell 'docker build . -f Dockerfile'
+			      powershell 'docker build -t jenkins-pipeline .'
 			      powershell 'docker images -a'
 			      powershell 'cd ..'
 			}
