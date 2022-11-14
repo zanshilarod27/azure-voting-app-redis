@@ -12,7 +12,7 @@ pipeline{
 			      powershell 'docker images -a'
 			      powershell 'docker build . -f Dockerfile -t helloworld'
 			      powershell 'docker images -a'
-			      powershell 'cd ..'
+			      powershell 'cd ..'}
 		}
 	} 
 }
