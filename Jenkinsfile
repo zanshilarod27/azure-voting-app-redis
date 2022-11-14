@@ -8,11 +8,8 @@ pipeline{
 		}
 		stage("Docker Build"){
 			steps{powershell 'docker images -a'
-			      powershell 'cd azure-vote'
-			      powershell 'docker images -a'
-			      powershell 'docker build . -f Dockerfile -t helloworld'
-			      powershell 'docker images -a'
-			      powershell 'cd ..'}
+			      powershell 'docker build . -f jenkins-Dockerfile'
+			      powershell 'docker images -a'}
 		}
 	} 
 }
